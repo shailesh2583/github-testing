@@ -12,7 +12,7 @@ def square(x):
     '''
 
     ## Code Here
-    # return x**2
+    return x**2
 
 def word_is_palindrome(string):
     '''
@@ -25,7 +25,7 @@ def word_is_palindrome(string):
     '''
 
     ## Code Here
-    # return string == string[::-1]
+    return string == string[::-1]
 
 def sqrt_of_numbers(num):
     '''
@@ -36,10 +36,10 @@ def sqrt_of_numbers(num):
         sqroot (float) rounded off upto 2 decimal places.
     '''
 
-    # if num < 0:
-    #     raise ValueError('Number must be positive')
-    # else:
-    #     return round(math.sqrt(num), 2)
+    if num < 0:
+        raise ValueError('Number must be positive')
+    else:
+        return round(math.sqrt(num), 2)
 
 def Maximum(arr):
     '''
@@ -51,9 +51,9 @@ def Maximum(arr):
         Max1, Max2 (int, int)
     '''
 
-    # arr = np.sort(arr)
-    # arr = arr[::-1]
-    # return arr[0], arr[1]
+    arr = np.sort(arr)
+    arr = arr[::-1]
+    return arr[0], arr[1]
 
 def even_sort(arr):
     '''
@@ -68,18 +68,19 @@ def even_sort(arr):
         sort_arr = [2, 6, 88 ,7 ,15]
         ## This is any even number is smaller than any odd number
     '''
-    # even = []
-    # odd = []
-    # for i in arr:
-    #     if i%2 == 0:
-    #         even.append(i)
-    #     else:
-    #         odd.append(i)
     
-    # even.sort()
-    # odd.sort()
+    even = []
+    odd = []
+    for i in arr:
+        if i%2 == 0:
+            even.append(i)
+        else:
+            odd.append(i)
+    
+    even.sort()
+    odd.sort()
 
-    # return even + odd
+    return even + odd
 
 def eqn_solver(A, B, C):
     '''
@@ -98,12 +99,12 @@ def eqn_solver(A, B, C):
         x, y (float, float)
     '''
 
-    # A = np.array([[A[0], B[0]], [A[1], B[1]]])
-    # B = np.array([C[0], C[1]]).T
+    A = np.array([[A[0], B[0]], [A[1], B[1]]])
+    B = np.array([C[0], C[1]]).T
 
-    # X = np.linalg.solve(A, B)
+    X = np.linalg.solve(A, B)
     
-    # return X[0], X[1]
+    return X[0], X[1]
 
 def swap_case(string):
     '''
@@ -118,15 +119,15 @@ def swap_case(string):
         string = 'hELLO wORLD'
     '''
 
-    # string = list(string)
+    string = list(string)
 
-    # for i in range(len(string)):
-    #         if string[i].islower():
-    #             string[i] = string[i].upper()
-    #         else:
-    #             string[i] = string[i].lower()
+    for i in range(len(string)):
+            if string[i].islower():
+                string[i] = string[i].upper()
+            else:
+                string[i] = string[i].lower()
 
-    # return ''.join(string)
+    return ''.join(string)
 
 def is_prime(num):
     '''
@@ -137,19 +138,19 @@ def is_prime(num):
         flag (bool)
     '''
 
-    # prime_flag = 0
+    prime_flag = 0
  
-    # if(num > 1):
-    #     for i in range(2, int(math.sqrt(num)) + 1):
-    #         if (num % i == 0):
-    #             prime_flag = 1
-    #             break
-    #     if (prime_flag == 0):
-    #         return True
-    #     else:
-    #         return False
-    # else:
-    #     return False
+    if(num > 1):
+        for i in range(2, int(math.sqrt(num)) + 1):
+            if (num % i == 0):
+                prime_flag = 1
+                break
+        if (prime_flag == 0):
+            return True
+        else:
+            return False
+    else:
+        return False
 
 def is_leap_year(year):
     '''
@@ -160,16 +161,16 @@ def is_leap_year(year):
         flag (bool)
     '''
 
-    # if (year % 4) == 0:
-    #     if (year % 100) == 0:
-    #         if (year % 400) == 0:
-    #             return True
-    #         else:
-    #             return False
-    #     else:
-    #          return True
-    # else:
-    #     return False
+    if (year % 4) == 0:
+        if (year % 100) == 0:
+            if (year % 400) == 0:
+                return True
+            else:
+                return False
+        else:
+             return True
+    else:
+        return False
 
 def is_perfect_square(num):
     '''
@@ -180,10 +181,10 @@ def is_perfect_square(num):
         flag (bool)
     '''
 
-    # if(num >= 0):
-    #     sr = int(math.sqrt(num))
-    #     return ((sr*sr) == num)
-    # return False
+    if(num >= 0):
+        sr = int(math.sqrt(num))
+        return ((sr*sr) == num)
+    return False
 
 def is_perfect_number(num):
     '''
@@ -196,14 +197,14 @@ def is_perfect_number(num):
         flag (bool)
     '''
 
-    # sum1 = 0
-    # for i in range(1, num):
-    #     if(num % i == 0):
-    #         sum1 = sum1 + i
-    # if (sum1 == num):
-    #     return True
-    # else:
-    #     return False
+    sum1 = 0
+    for i in range(1, num):
+        if(num % i == 0):
+            sum1 = sum1 + i
+    if (sum1 == num):
+        return True
+    else:
+        return False
 
 def resize_array(a):
     '''
@@ -214,8 +215,8 @@ def resize_array(a):
         b (np.array) of size 2x3
     '''
 
-    # a = np.array(a)
-    # return a.reshape(2, 3)
+    a = np.array(a)
+    return a.reshape(2, 3)
 
 def reverse_step_array(a):
     '''
@@ -230,7 +231,7 @@ def reverse_step_array(a):
         b = [9, 6, 3]
     '''
 
-    # return a[::-3]
+    return a[::-3]
 
 def reverse_words(string):
     '''
@@ -245,10 +246,10 @@ def reverse_words(string):
         string = 'World Again Hello'
     '''
 
-    # words = string.split(' ')
-    # words = words[::-1]
+    words = string.split(' ')
+    words = words[::-1]
 
-    # return ' '.join(words)
+    return ' '.join(words)
 
 def count_characters(string):
     '''
@@ -262,15 +263,15 @@ def count_characters(string):
         ## then
         dict = {'H': 1, 'e': 1, 'l': 3, 'o': 2, 'W': 1, 'r': 1, 'd': 1}
     '''
-    # freq = dict()
-    # for c in string:
-    #     if c == ' ':
-    #         continue
-    #     elif c in freq:
-    #         freq[c] += 1
-    #     else:
-    #         freq[c] = 1
-    # return freq
+    freq = dict()
+    for c in string:
+        if c == ' ':
+            continue
+        elif c in freq:
+            freq[c] += 1
+        else:
+            freq[c] = 1
+    return freq
 
 def remove_special_characters(string):
     '''
@@ -284,15 +285,15 @@ def remove_special_characters(string):
         ## then
         str = 'Hello World 123 th15 1s 4 t35t str1ng'
     '''
-    # string = list(string)
+    string = list(string)
 
-    # for i in range(len(string)):
-    #     if string[i] == ' ':
-    #         continue
-    #     elif not string[i].isalnum():
-    #         string[i] = ''
+    for i in range(len(string)):
+        if string[i] == ' ':
+            continue
+        elif not string[i].isalnum():
+            string[i] = ''
 
-    # return ''.join(string)
+    return ''.join(string)
 
 def sort_tuple_of_tuples(tuple):
     '''

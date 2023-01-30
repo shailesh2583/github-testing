@@ -12,7 +12,7 @@ def square(x):
     '''
 
     ## Code Here
-    return x**2
+    return x*2
 
 def word_is_palindrome(string):
     '''

@@ -1,6 +1,6 @@
 import unittest
 import assgn1_soln
-# import numpy as np
+import numpy as np
 
 class Testassgn1_soln(unittest.TestCase):
 
@@ -52,7 +52,7 @@ class Testassgn1_soln(unittest.TestCase):
         self.assertEqual(assgn1_soln.is_perfect_number(5), False)
 
     # def test_resize_array(self):
-        # self.assertEqual(assgn1_soln.resize_array([1,2,3,4,5,6]).tolist(), np.array([[1,2,3],[4,5,6]]).tolist())
+        self.assertEqual(assgn1_soln.resize_array([1,2,3,4,5,6]).tolist(), np.array([[1,2,3],[4,5,6]]).tolist())
 
     def test_reverse_step_array(self):
         self.assertEqual(assgn1_soln.reverse_step_array([1, 2, 3, 4, 5, 6, 7, 8, 9]), [9, 6, 3])

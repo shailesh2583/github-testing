@@ -51,7 +51,7 @@ class Testassgn1_soln(unittest.TestCase):
         self.assertEqual(assgn1_soln.is_perfect_number(6), True)
         self.assertEqual(assgn1_soln.is_perfect_number(5), False)
 
-    def test_resize_array(self):
+    # def test_resize_array(self):
         # self.assertEqual(assgn1_soln.resize_array([1,2,3,4,5,6]).tolist(), np.array([[1,2,3],[4,5,6]]).tolist())
 
     def test_reverse_step_array(self):
